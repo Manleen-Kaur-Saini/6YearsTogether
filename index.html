@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6 Years of Putting Up With Me</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Music -->
+  <audio id="bgMusic" src="media/song.mp3" loop muted></audio>
+
+  <!-- Start Experience Button -->
+  <div id="startContainer" class="start-container">
+    <button id="startBtn" class="btn">Click ethe Sohniye</button>
+  </div>
+
+  <!-- Background Elements -->
+  <div class="background">
+    <!-- Floating gradient shapes -->
+    <div class="gradient-shape shape1"></div>
+    <div class="gradient-shape shape2"></div>
+    <div class="gradient-shape shape3"></div>
+  </div>
+
+  <!-- Floating Hearts (kept subtle) -->
+  <div class="hearts">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h1 class="romantic">6 Years of Sachiyan Mohabbataan</h1>
+    <p class="joke">Welcome to apniyan sohniyan memoriyan meri guggliye. Lob ju, muaaah</p>
+
+    <!-- Escape the 'No' Button Mini-Game -->
+    <section id="escape-game" class="section">
+      <h2 class="romantic">Answer My Question</h2>
+      <button id="openModal" class="btn">Open Surprise!</button>
+    </section>
+
+    <!-- Memory Lane Scroller -->
+    <section id="memory-lane" class="section">
+      <h2 class="romantic">Memory Lane</h2>
+      <div class="timeline">
+        <!-- Example Milestones -->
+        <div class="milestone" data-memory="In the garden of your love, every flower blooms with passion. Your presence is like the spring that brings life to my world." data-img="media/image6.jpg">
+          <span>Appan</span>
+        </div>
+        <div class="milestone" data-memory="Tera naam mere dil ch mithi dhun vngu goonjda." data-img="media/image1.jpg">
+          <span>Eh V appan</span>
+        </div>
+        <div class="milestone" data-memory="Mere aam di tn tuhi bss khaas ai!" data-img="media/image2.jpg">
+          <span>Eh v appan doven</span>
+        </div>
+        <div class="milestone" data-memory="Sanu teri deed jehi deed nahi." data-img="media/image3.jpg">
+          <span>Ki banu mera</span>
+        </div>
+        <div class="milestone" data-memory="Our love is a timeless tale, whispered by the winds." data-img="media/image4.jpg">
+          <span>Love</span>
+        </div>
+        <div class="milestone" data-memory="Tere bina kall di umeed nahi" data-img="media/IMG-20241230-WA0081.jpg">
+          <span>Mine Forever</span>
+        </div>
+        <!-- Add more milestones as desired -->
+      </div>
+      <div id="memoryDisplay" class="memory-display">
+        <p id="memoryText"></p>
+        <img id="memoryImg" src="" alt="Memory Image" />
+      </div>
+    </section>
+
+    <!-- Virtual Date Generator -->
+    <section id="date-generator" class="section">
+      <h2 class="romantic">Future Date Generator</h2>
+      <div class="wheel-container">
+        <!-- Spin wheel with a picture inside -->
+        <div id="wheel" class="wheel">
+          <img src="media/image3.jpg" alt="Spin Wheel" class="spin-wheel-image" />
+        </div>
+      </div>
+      <button id="spinDate" class="btn">Spin Date Idea</button>
+    </section>
+
+    <!-- Password-Locked Secret Message -->
+    <section id="secret-message" class="section">
+      <h2 class="romantic">Secret Message</h2>
+      <p class="joke">Enter the magic word: <em>"Where did I Kiss you for the first time?"</em></p>
+      <input type="text" id="passwordInput" placeholder="Enter password..." />
+      <button id="submitPassword" class="btn">Unlock</button>
+      <div id="secretDisplay" class="secret-display"></div>
+    </section>
+  </div>
+
+  <!-- Spin Result Popup -->
+  <div id="spinResultPopup" class="spin-result-popup hidden">
+    <div class="popup-content">
+      <h2 class="romantic">Our Date Idea Is</h2>
+      <div class="result-body">
+        <img id="resultImage" src="" alt="Date Idea Image" />
+        <p id="resultText" class="joke"></p>
+      </div>
+      <button id="closePopup" class="btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Modal for Escape Game -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3 class="romantic">Do you beleive I am your Soulmate??</h3>
+      <div class="modal-buttons">
+        <button id="yesBtn" class="btn">YES</button>
+        <button id="noBtn" class="btn">NO</button>
+      </div>
+      <p id="errorMessage" class="joke"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+:root {
+    --primary: #ff7eb6;
+    --accent: #ffd700;
+    --background: #1a1a1a;
+    --text: #ffffff;
+    --glass: rgba(255, 255, 255, 0.1);
+    --gradient: linear-gradient(135deg, #ff7eb6 0%, #ff758c 100%);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.particle-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(0,0,0,0.8) 100%);
+}
+
+/* Glass Morphism Effect */
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(16px);
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Typography */
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    
+    -webkit-text-fill-color: transparent;
+}
+
+.highlight {
+    color: var(--accent);
+    display: block;
+    font-size: 1.2em;
+}
+
+/* Buttons */
+.btn {
+    padding: 1.2rem 2.4rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--text);
+}
+
+.btn-escape {
+    background: var(--accent);
+    color: var(--background);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover::after {
+    opacity: 1;
+}
+
+/* Wheel Styles */
+.wheel-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 2rem auto;
+}
+
+.wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 4s cubic-bezier(0.25, 1, 0.5, 1);
+    background: conic-gradient(
+        #ff7eb6 0% 25%,
+        #ffd700 25% 50%,
+        #ff4d4d 50% 75%,
+        #ffffff 75% 100%
+    );
+}
+
+
+/* Add remaining CSS for animations and responsiveness */
